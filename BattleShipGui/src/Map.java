@@ -8,23 +8,31 @@ public class Map implements ActionListener{
 	JButton[][] btns;
 	WarShip[] warShips;
 	JLabel statusLabel = new JLabel();
-	HumanPlayer human = new HumanPlayer();
-	CompPlayer comp  = new CompPlayer();
+	HumanPlayer human =new HumanPlayer();
+	CompPlayer comp = new CompPlayer();
+	int mapSize =6;
 	
 	
-	Map(int mapSize,String Title) {
+	Map(int mapSize,String Title,boolean visible,HumanPlayer human,CompPlayer comp) {
+		
+		
 		mainPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainPage.setSize(400,400);
 		mainPage.setLayout(new FlowLayout());
 		mainPage.setTitle(Title);
 		generateButtons(mapSize);
 		generateWarships(mapSize);
+		this.human=human;
+		this.comp=comp;
+		this.mapSize=mapSize;
+	
 		mainPage.add(statusLabel);
-		displayMap(Title);
+		if(visible) { 
+			displayMap(Title);
+		}
 		mainPage.setVisible(true);
-		
+	}	
 
-	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -33,6 +41,10 @@ public class Map implements ActionListener{
 		if(obj instanceof JButton ) {
 			JButton btn = (JButton)obj;
 			human.Fire(btn, warShips, btns, statusLabel);
+			
+			int randomX = (int) (Math.random()*this.mapSize);
+			int randomy = (int) (Math.random()*this.mapSize);
+			comp.Fire(btns[randomy][randomX], warShips, btns, statusLabel);
 			
 		}
 		

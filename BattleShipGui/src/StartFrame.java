@@ -11,6 +11,9 @@ public class StartFrame implements ActionListener{
 	JTextField enterMapSize = new JTextField(12);
 	JButton StartGame = new JButton("Start Game");
 	
+	HumanPlayer human = new HumanPlayer();
+	CompPlayer comp  = new CompPlayer();
+	
 	StartFrame() {
 		mainPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainPage.setSize(400,400);
@@ -28,7 +31,7 @@ public class StartFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		String mapSize = enterMapSize.getText();
-		Map CompMap = new Map(Integer.parseInt(mapSize),"Computer Map");
-		Map HumanMap = new Map(Integer.parseInt(mapSize),"Commander Map");
+		Map CompMap = new Map(Integer.parseInt(mapSize),"Computer Map",false,human,comp);
+		Map HumanMap = new Map(Integer.parseInt(mapSize),"Commander Map",true,human,comp);
 	}
 }
