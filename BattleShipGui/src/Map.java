@@ -8,6 +8,9 @@ public class Map implements ActionListener{
 	JButton[][] btns;
 	WarShip[] warShips;
 	JLabel statusLabel = new JLabel();
+	HumanPlayer human = new HumanPlayer();
+	CompPlayer comp  = new CompPlayer();
+	
 	
 	Map(int mapSize,String Title) {
 		mainPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -29,38 +32,7 @@ public class Map implements ActionListener{
 		Object obj = e.getSource();
 		if(obj instanceof JButton ) {
 			JButton btn = (JButton)obj;
-			int y = Integer.parseInt(btn.getText().split("_")[0]);
-			int x = Integer.parseInt(btn.getText().split("_")[1]);
-			System.out.println("X Position Selected: "+x+" y Position Selected: "+y);
-			
-			for(int i =0;i<this.warShips.length;i++) {
-				int xWar= this.warShips[i].x;
-				int[] yWar = this.warShips[i].y;
-				System.out.println("Checking Warship: " +i);
-				System.out.println("Warship X Coordinate: " +xWar);
-				if(x==xWar) {
-					for(int j=0; j<yWar.length;j++) {
-						System.out.println("Warship Y Coordinate: " +yWar[j]);
-						System.out.println("Comparing y:"+y+" With yWar: "+yWar[j]);
-						System.out.println(y==yWar[j]);
-						if(y==yWar[j]) {
-							btns[y][x].setBackground(Color.red);
-							btns[y][x].setText("Hit");
-							warShips[i].shield--;
-							if(warShips[i].shield==0) {
-								warShips[i].status=false;
-								statusLabel.setText(warShips[i].getClass().getName() + "Was Destroyed");
-							}
-							return;
-						}
-					}
-				
-				} else {
-					btns[y][x].setBackground(Color.blue);
-					btns[y][x].setText("Miss");;
-				}
-			
-			}
+			human.Fire(btn, warShips, btns, statusLabel);
 			
 		}
 		

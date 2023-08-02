@@ -1,3 +1,5 @@
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 public class CompPlayer implements Play{
 	String name = "Comp";
@@ -10,7 +12,7 @@ public class CompPlayer implements Play{
 	}
 
 	@Override
-	public void Fire() {
+	public void Fire(JButton btn, WarShip[] warShips,JButton[][] btns ,JLabel statusLabel) {
 		// TODO Auto-generated method stub
 		
 	}
