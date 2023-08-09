@@ -12,7 +12,7 @@ public class Game extends JFrame{
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Game newGame = new Game(50);
+		Game newGame = new Game(500);
 	}
 	Game(int mapSize) {
 		Map newMap = new Map(mapSize);
@@ -105,7 +105,7 @@ public class Game extends JFrame{
 			}
 
 			try {
-				Thread.sleep(50);
+				Thread.sleep(5);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				System.out.println("System Crashed");
