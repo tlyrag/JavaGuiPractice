@@ -57,7 +57,8 @@ public class Application extends JFrame implements ActionListener, ItemListener{
 		
 		db.dropTable(conn, "BankInfo");
 		db.createTable(conn);
-		Path filepath = Paths.get("D:\\Douglas\\Java\\JavaGuiPractice\\BankingSystem\\src\\clients.txt");
+		Path filepath = Paths.get("clients.txt");
+
 		txtController.readFile(filepath);
 		customers = txtController.customers;
 		Application bank = new Application();

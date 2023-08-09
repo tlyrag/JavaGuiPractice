@@ -1,0 +1,6 @@
+Name,AccountNumber,Password,Balance
+Alice,123456,123,5000.00
+Bob,789012,456,7500.50
+Charlie,345678,789,3200.25
+David,901234,012,6100.75
+Eva,567890,345,2500.00
