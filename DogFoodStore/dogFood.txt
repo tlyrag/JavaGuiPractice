@@ -1,0 +1,11 @@
+Name,Size,Unit Price
+Beef Delight,Small,$10.99
+Chicken Feast,Small,$9.99
+Lamb Lunch,Large,$14.99
+Salmon Special,Medium,$12.99
+Turkey Treat,Large,$15.99
+Veggie Crunch,Medium,$10.49
+Pork Pleasure,Small,$11.99
+Ocean Mix,Medium,$13.49
+Tender Tuna,Large,$16.49
+Healthy Harvest,Medium,$10.99
