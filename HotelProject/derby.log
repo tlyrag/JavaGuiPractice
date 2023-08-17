@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Aug 16 18:57:51 PDT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-018a-0136-9e30-00000f315958 
+on database directory D:\Douglas\Java\JavaGuiPractice\HotelProject\hotel with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@22d8cfe0 
+Loaded from file:/D:/Douglas/Java/JavaGuiPractice/HotelProject/ExternalJars/derby.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=17.0.7+7
+user.dir=D:\Douglas\Java\JavaGuiPractice\HotelProject
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

@@ -216,7 +216,7 @@ public class Application extends JFrame implements ActionListener, ItemListener{
 						Customer= currUser;
 						
 					}
-					conn.close();
+				
 				} catch (Exception err) {
 					// TODO Auto-generated catch block
 					System.out.println("Errror in Select: "+err.getMessage());
